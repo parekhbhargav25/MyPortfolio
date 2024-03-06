@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Logo = () => {
     return (
         <Link href ='/'> 
-            <Image src='/logo.svg' width={54} height={54} priority alt='bhargav' />
+            <Image src='/4.png' width={90} height={60} priority alt='bhargav' />
         </Link>
     )
 }
