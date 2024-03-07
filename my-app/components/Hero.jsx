@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import {Button} from './ui/button' 
 import {Download, Send} from 'lucide-react'
+import image from '../public/hero/developer.png'
 
 import { RiTeamFill, RiTodoFill, RiArrowDownSLine} from 'react-icons/ri'
 
@@ -27,7 +28,7 @@ const Hero = () => {
                     endCountNum={8} 
                     badgeText='Finished Projects' />
 
-                    <DevImg containerStyles={"bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"} imgSrc='/hero/developer1.png ' />
+                    <DevImg containerStyles={"bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"} imgSrc={image} />
 
                     </div>
                 </div>
