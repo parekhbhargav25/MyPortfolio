@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 
-
 // import swipper style
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -17,45 +16,24 @@ import {Card, CardDescription, CardHeader, CardTitle} from '@/components/ui/card
 
 const reviewData = [
     {
-        avatar: '/reviews/avatar-1.png',
-        name: 'Richard Thompson',
-        job: 'system developer',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
+        avatar: '/reviews/Baps_logo.svg',
+        name: 'BAPS Charities',
+        job: 'Youth Mentor',
+        review: "Since 2012, I've been passionately mentoring teenagers on life skills and promoting an addiction-free lifestyle, fostering positive growth and development in young minds. Gives me sense of fulfillment",
 
     },
     {
-        avatar: '/reviews/avatar-2.png',
-        name: 'Richard Thompson',
-        job: 'Software developer',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
+        avatar: '/reviews/Baps_logo.svg',
+        name: 'Baps Swaminarayan Sanstha',
+        job: 'Construction of Akshardham Temple',
+        review: "Volunteered at Robbinsville Akshardham during its construction phase for about a year, actively participating in various team settings to contribute to the project's success."
 
     },
     {
-        avatar: '/reviews/avatar-3.png',
-        name: 'Richard Thompson',
-        job: 'Developer Manager',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
-
-    },
-    {
-        avatar: '/reviews/avatar-4.png',
-        name: 'Richard Thompson',
-        job: 'system developer',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
-
-    },
-    {
-        avatar: '/reviews/avatar-5.png',
-        name: 'Richard Thompson',
-        job: 'system developer',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
-
-    },
-    {
-        avatar: '/reviews/avatar-6.png',
-        name: 'Richard Thompson',
-        job: 'system developer',
-        review: 'lorem sddfdsfsdf fsfsf dsadwfs gfddsfsf dfsdfsdf dfsdf',
+        avatar: '/reviews/bapsCharities.jpeg',
+        name: 'BAPS Charities',
+        job: 'Annual Walkathon',
+        review: 'Annualy participate in walkathons to support various charitable foundations, including SickKids Foundation, William Osler Health System, CNIB Foundation, and Victoria General Hospital Foundation.',
 
     },
 ]
@@ -64,7 +42,7 @@ const Reviews = () => {
   return (
     <section className='mb-12 xl:mb-32 '>
         <div className='container mx-auto'>
-            <h2 className='section-title mb-12 text-center mx-auto'> Reviews </h2>
+            <h2 className='section-title mb-12 text-center mx-auto'> Volunteer Work </h2>
             {/* Slider */}
             <Swiper slidesPerView={1} breakpoints={{
                 640: {slidesPerView: 2},

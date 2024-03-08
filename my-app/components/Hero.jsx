@@ -21,16 +21,22 @@ const handleButtonClick = () => {
 
 const Hero = () => {
 
-    const languages = ["english", "gujarati", "spanish", "french", "chinese"];
+    const languages = ["english", "gujarati", "Japanese", "arabic", "Italian", "spanish", "french", "chinese"];
     const [greetingIndex, setGreetingIndex] = useState(0);
     const [showContent, setShowContent] = useState(false);
 
     const getGreeting = (language) => {
         switch (language) {
             case "gujarati":
-                return { text: "Kem cho 🙏", color: "#e91e63" }; // Gujarati greeting
+                return { text: "કેમ છો 🙏", color: "#e91e63" }; // Gujarati greeting
+            case "Italian":
+                return { text: "Ciao! 🤌", color: "#0097a7" }; // italian greeting
+            case "arabic":
+                return { text: "مرحبًا! 👋", color: "#ef6c00" }; // arabic greeting
+            case "Japanese":
+                return { text: "こんにちは! 🫰", color: "#8bc34a" }; // Spanish greeting
             case "spanish":
-                return { text: "¡Hola! 🫰", color: "#f44336" }; // Spanish greeting
+                return { text: "Hola! 🫰", color: "#f44336" }; // Spanish greeting
             case "french":
                 return { text: "Bonjour! 👋", color: "#9c27b0" }; // French greeting
             default:
