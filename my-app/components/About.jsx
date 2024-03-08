@@ -90,7 +90,7 @@ const skillData = [
                 imgPath: '/about/nodejspn.png'
             },
             {
-                imgPath: '/about/mongodb.png'
+                imgPath: '/about/mongodbORG.png'
             },
             {
                 imgPath: '/about/bootstrap.png'
