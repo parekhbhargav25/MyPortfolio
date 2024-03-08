@@ -146,10 +146,10 @@ const About = () => {
             <div className="flex flex-col xl:flex-row" >
                 {/* image */}
                 <div  className="hidden xl:flex relative">
-                    <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-n0-repeat relative' imgSrc='/about/Bhargav1.png'/>
+                    <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgSrc='/about/Bhargav1.png'/>
                 </div>
-                <div style={{ paddingLeft: '10%' }}className="flex-1 justify-center text-center">
-                    <Tabs className="justify-center text-center" defaultValue="personal">
+                <div style={{ paddingLeft: '10%' }}className="flex-1 items-center justify-center text-center">
+                    <Tabs className="justify-center items-center text-center" defaultValue="personal">
                         <TabsList className="w-full justify-center text-center grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none ">
                             <TabsTrigger className="w-[162px] xl:w-auto justify-center text-center" value = 'personal'>Personal Info </TabsTrigger>
                             <TabsTrigger className="w-[162px] xl:w-auto justify-center text-center" value = 'qualification'>Qualification</TabsTrigger>
@@ -160,7 +160,7 @@ const About = () => {
                                 <div className="text-center xl:text-left">
                                     <h3 className="h3 max-w-xl mx-auto xl:mx-0 mb-4 "> Continuously learning and evolving in the ever-changing tech landscape</h3>
                                     <p className="subtitle max-w-xl mx-auto xl:mx-0 "> 
-                                    I specialize in creating intuitive websites that leverage cutting-edge technology to deliver dynamic and engaging user experiences.
+                                    I specialize in creating intuitive softwares systems and websites that leverage cutting-edge technology to deliver dynamic and engaging user experiences.
                                     </p>
                                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                                         {infoData.map((item, index) => {

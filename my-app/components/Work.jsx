@@ -36,7 +36,7 @@ const projectData = [
         image: '/work/auction.png',
         category: 'C++ python',
         name: 'Auction System',
-        description: 'Developed front-end using Python and  back-end with C++. Created a bash script to automate testing procedures. Implemented key features: user registarion, admin access, bidding etc.',
+        description: 'Developed front-end using Python and  back-end with C++. Created a bash script to automate testing procedures. Implemented key features: user registarion, admin access, bidding, selling etc.',
         link:'https://github.com/IslamNuryyev/SQA_project',
         github:'https://github.com/IslamNuryyev/SQA_project'
     },
@@ -44,7 +44,7 @@ const projectData = [
         image: '/work/analysis.png',
         category: 'react js',
         name: ' Analysis on CO2 emission by Car',
-        description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles from 2000 to 2014.',
+        description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles',
         link:'/',
         github:'/'
     },
@@ -71,7 +71,7 @@ const Work =() =>{
                 </div>
                 {/* Slider */}
                 <div className='xl:max-w-[1000px] xl:absolute right-0 top-0'>
-                    <Swiper className='h-[550px]' slidesPerView={1} breakpoints={{
+                    <Swiper className='h-[590px]' slidesPerView={1} breakpoints={{
                         640: {
                             slidesPerView: 2
                         }

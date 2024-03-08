@@ -23,26 +23,26 @@ const reviewData = [
 
     },
     {
-        avatar: '/reviews/Baps_logo.svg',
-        name: 'Baps Swaminarayan Sanstha',
-        job: 'Construction of Akshardham Temple',
-        review: "Volunteered at Robbinsville Akshardham during its construction phase for about a year, actively participating in various team settings to contribute to the project's success."
-
-    },
-    {
         avatar: '/reviews/bapsCharities.jpeg',
         name: 'BAPS Charities',
         job: 'Annual Walkathon',
         review: 'Annualy participate in walkathons to support various charitable foundations, including SickKids Foundation, William Osler Health System, CNIB Foundation, and Victoria General Hospital Foundation.',
 
     },
+    {
+        avatar: '/reviews/Baps_logo.svg',
+        name: 'Baps Swaminarayan Sanstha',
+        job: 'Construction of Akshardham Temple',
+        review: "Volunteered at Robbinsville Akshardham during its construction phase for about a year, actively participating in various team settings to contribute to the project's success."
+
+    }
 ]
 
 const Reviews = () => {
   return (
     <section className='mb-12 xl:mb-32 '>
         <div className='container mx-auto'>
-            <h2 className='section-title mb-12 text-center mx-auto'> Volunteer Work </h2>
+            <h2 className='section-title p-10  mb-12 text-center mx-auto'> Volunteer Work </h2>
             {/* Slider */}
             <Swiper slidesPerView={1} breakpoints={{
                 640: {slidesPerView: 2},
@@ -53,12 +53,12 @@ const Reviews = () => {
             pagination ={{
                 clickable:true
             }}
-            className='h-[350px]'
+            className='h-[470px]'
             >
                 {reviewData.map ((person,index) =>{
                     return (
                         <SwiperSlide key={index}>
-                            <Card className='bg-tertiary dark:bg-secondary/40 p-8 min-h-[300px]'>
+                            <Card className='bg-tertiary dark:bg-secondary/40 p-8 min-h-[400px]'>
                                 <CardHeader classNamep='p-0 mb-10'>
                                     <div className='flex items-center gap-x-4'>
                                         {/** image */}
