@@ -1,3 +1,6 @@
+'use client'
+
+import {useState, useEffect} from 'react'
 import Link from 'next/link'
 import {Button} from './ui/button' 
 import {Download, Send} from 'lucide-react'
@@ -9,7 +12,48 @@ import DevImg from './DevImg'
 import Badge from './Badge'
 import Socials from './Socials'
 
+
+const handleButtonClick = () => {
+    // Replace 'https://example.com' with the URL you want to open in a new tab
+  window.open('https://drive.google.com/file/d/1gv0AgTdaYGNJCZxJhi2Hatv6jFO3o87M/view?usp=drive_link', '_blank');
+    };
+
+
 const Hero = () => {
+
+    const languages = ["english", "gujarati", "spanish", "french", "chinese"];
+    const [greetingIndex, setGreetingIndex] = useState(0);
+    const [showContent, setShowContent] = useState(false);
+
+    const getGreeting = (language) => {
+        switch (language) {
+            case "gujarati":
+                return { text: "Kem cho 🙏", color: "#e91e63" }; // Gujarati greeting
+            case "spanish":
+                return { text: "¡Hola! 🫰", color: "#f44336" }; // Spanish greeting
+            case "french":
+                return { text: "Bonjour! 👋", color: "#9c27b0" }; // French greeting
+            default:
+                return { text: "Hello! 🤙", color: "#26a69a" }; // Default greeting
+        }
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        setShowContent(true);
+        }, 1000 * languages.length); // Change the delay time as per your requirement
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setGreetingIndex((prevIndex) => (prevIndex + 1) % languages.length);
+        }, 3000); // Change the delay time as per your requirement
+
+        return () => clearInterval(interval);
+    }, []);
+    const { text, color } = getGreeting(languages[greetingIndex]);
   return (
     <section className='py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none'>
         <div className='container mx-auto'>
@@ -33,16 +77,19 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
-                    <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]'> Web Developer</div>
-                        <h1 className='h1 mb-4'> Hello, My name is bhargav</h1>
-                        <p className='subtitle max-w-[490px] mx-auto xl:mx-0'> brief introdcution insight in tojfjndmkffdsjvkm</p>
+                    <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]'> Software / Web Developer</div>
+                    <h1 className='h1 mb-4'>
+                        <span className='h1 mb-4' style={{ color }}>{text}</span> My name is Bhargav
+                    </h1>
+
+                        <p className='subtitle max-w-[490px] mx-auto xl:mx-0'> Passionate and experienced Software Engineer with over 2 years in web, software and backend development. Proficient in writing clean, maintainable code for diverse projects. Comfortable collaborating in teams of all sizes, adaptable to both remote and office environments.</p>
                     <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
                         <Link href='/contact'>
                             <Button className='gap-x-2'> Contact me <Send size={18} /> </Button>
                         </Link> 
-                        <Button variant = 'secondary' className='gap-x-2'> 
-                            Download CV <Download size={18} /> 
-                        </Button>
+                            <Button onClick={handleButtonClick} variant = 'secondary' className='gap-x-2'> 
+                                Download CV <Download size={18} /> 
+                            </Button>
 
                     </div>
                     <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconStyles='text-foreground text-[22px] hover:text-primary transition-all'/>

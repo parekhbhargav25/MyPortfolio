@@ -2,6 +2,7 @@ import DevImg from "./DevImg";
 import Image from 'next/image'
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from "lucide-react";
+import { DiDatabase } from "react-icons/di";
 
 const infoData = [
     {
@@ -18,7 +19,7 @@ const infoData = [
     },
     {
         icon: <Calendar size = {20}/>,
-        text: 'Born on May 1997'
+        text: 'Graduated in Dec 2023'
     },
     {
         icon: <GraduationCap size = {20}/>,
@@ -36,16 +37,16 @@ const skillData = [
         title: 'skills',
         data:[
             {
-                name: 'Front End Developent'
+                name: 'Languages: Python, C, C++, Java, JavaScript, HTML, CSS, SQL, PL/SQL',
             },
             {
-                name: 'React, HTML, CSS, JavaScript'
+                name: 'Databases: MySQL, PostgreSQL, NoSQL, MongoDB, AWS RDS, AWS DynamoDB'
             },
             {
-                name: 'Back End Development'
+                name: 'Technologies: VS code, MySQL, React.js, Node.js, AWS, GraphQL, Git, Linux'
             },
             {
-                name: 'Python, Java, C/C++, '
+                name: 'Concepts: Object Oriented Programming, Functional programming, Agile, Data Structures and Algorithms, CI/CD, SDLC, REST APIs'
             },
         ]
     },
@@ -56,13 +57,43 @@ const skillData = [
                 imgPath: '/about/vscode.svg'
             },
             {
-                imgPath: '/about/figma.svg'
+                imgPath: '/about/physics.png'
             },
             {
-                imgPath: '/about/notion.svg'
+                imgPath: '/about/git.png'
             },
             {
-                imgPath: '/about/wordpress.svg'
+                imgPath: '/about/java-script.png'
+            },
+            {
+                imgPath: '/about/linux.png'
+            },
+            {
+                imgPath: '/about/python.png'
+            },
+            {
+                imgPath: '/about/AWS.svg.png'
+            },
+            {
+                imgPath: '/about/java.png'
+            },
+            {
+                imgPath: '/about/html.png'
+            },
+            {
+                imgPath: '/about/c-.png'
+            },
+            {
+                imgPath: '/about/mysql.png'
+            },
+            {
+                imgPath: '/about/nodejs.png'
+            },
+            {
+                imgPath: '/about/mongodb.png'
+            },
+            {
+                imgPath: '/about/bootstrap.png'
             },
         ]
     }
@@ -117,9 +148,9 @@ const About = () => {
                 <div  className="hidden xl:flex relative">
                     <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-n0-repeat relative' imgSrc='/about/Bhargav1.png'/>
                 </div>
-                <div style={{ paddingLeft: '10%' }}className="flex-1">
-                    <Tabs defaultValue="personal">
-                        <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none ">
+                <div style={{ paddingLeft: '10%' }}className="flex-1 justify-center text-center">
+                    <Tabs className="justify-center text-center" defaultValue="personal">
+                        <TabsList className="w-full justify-center text-center grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none ">
                             <TabsTrigger className="w-[162px] xl:w-auto justify-center text-center" value = 'personal'>Personal Info </TabsTrigger>
                             <TabsTrigger className="w-[162px] xl:w-auto justify-center text-center" value = 'qualification'>Qualification</TabsTrigger>
                             <TabsTrigger className="w-[162px] xl:w-auto justify-center text-center" value = 'skills'>Skills </TabsTrigger>
@@ -127,10 +158,9 @@ const About = () => {
                         <div className="text-lg mt-12 xl:mt-8">
                             <TabsContent value = "personal">
                                 <div className="text-center xl:text-left">
-                                    <h3 className="h3 max-w-xl mx-auto xl:mx-0 mb-4 "> Unmatched service quality for over 5 years</h3>
+                                    <h3 className="h3 max-w-xl mx-auto xl:mx-0 mb-4 "> Continuously learning and evolving in the ever-changing tech landscape</h3>
                                     <p className="subtitle max-w-xl mx-auto xl:mx-0 "> 
-                                    I Specialize in crafting intuative websites with cutting edge technology
-                                        deliverying dynamic and engaging user experience
+                                    I specialize in creating intuitive websites that leverage cutting-edge technology to deliver dynamic and engaging user experiences.
                                     </p>
                                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                                         {infoData.map((item, index) => {
@@ -217,13 +247,13 @@ const About = () => {
                                 <div className="text-center xl:text-left ">
                                     <h3 className="h3 mb-8 ">What i Use Everyday</h3>
                                     <div className="mb-16">
-                                        <h4 className="text-xl font-semibold mb-2"> Skills</h4>
+                                        {/* <h4 className="text-xl font-semibold mb-2"> Skills</h4> */}
                                         <div className="border-b border-border mb-4"></div>
                                         <div>
                                             {getData(skillData, 'skills').data.map((item, index) =>{
                                                 const {name}= item
                                                 return (
-                                                    <div className="w-2/4 text-center xl:text-left mx-auto xl:mx-0" key={index}>
+                                                    <div className="w-2/2 text-center xl:text-left mx-auto xl:mx-0 mb-6" key={index}>
                                                         <div className="font-medium">{name}</div>
                                                     </div>
                                                 )
@@ -238,16 +268,16 @@ const About = () => {
                                         </h4>
                                         <div className="border-b border-border mb-4"> </div>
                                         {/*tools lidt */}
-                                        <div className="flex gap-x-8 justify-center xl:justify-start">
-                                            {getData(skillData, 'tools').data.map((item, index) =>{
-                                                const {imgPath} = item;
-                                                return (
-                                                    <div key ={index}>
-                                                        <Image src={imgPath} width={48} height ={48} alt='tools' priority/>
-                                                    </div>
-                                                )
-                                            })}
-                                        </div>
+                                            <div className="grid xl:grid-cols-6 sm:grid-cols-6 gap-y-6  gap-x-6 justify-center xl:justify-start">
+                                                {getData(skillData, 'tools').data.map((item, index) =>{
+                                                    const {imgPath} = item;
+                                                    return (
+                                                        <div key ={index}>
+                                                            <Image src={imgPath} width={48} height ={48} alt='tools' priority/>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
                                     </div>
                                 </div>
                             </TabsContent>

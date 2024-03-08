@@ -32,7 +32,7 @@ const Services = () => {
                                 <CardHeader className='text-primary absolute -top-[60px]'>
                                     <div className='w-[140px] h-[80px] bg-white dark:bg-background flex justify-center items-center'> {item.icon}</div>
                                 </CardHeader>
-                                <CardContent className="text-center ">
+                                <CardContent className="justify-center text-center ">
                                     <CardTitle className='mb-4'> 
                                         {item.title}
                                     </CardTitle>
