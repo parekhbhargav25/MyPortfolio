@@ -26,7 +26,7 @@ const reviewData = [
         avatar: '/reviews/bapsCharities.jpeg',
         name: 'BAPS Charities',
         job: 'Annual Walkathon',
-        review: 'Annualy participate in walkathons to support various charitable foundations, including SickKids Foundation, William Osler Health System, CNIB Foundation, and Victoria General Hospital Foundation.',
+        review: 'annually participate in walkathons to support various charitable foundations, including SickKids Foundation, William Osler Health System, CNIB Foundation, and Victoria General Hospital Foundation.',
 
     },
     {

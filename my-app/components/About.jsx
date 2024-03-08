@@ -87,7 +87,7 @@ const skillData = [
                 imgPath: '/about/mysql.png'
             },
             {
-                imgPath: '/about/nodejs.png'
+                imgPath: '/about/nodejspn.png'
             },
             {
                 imgPath: '/about/mongodb.png'
