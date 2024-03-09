@@ -17,6 +17,15 @@ import ProjectCard from './ProjectCard'
 
 const projectData = [
     {
+        image: '/work/portfolio.png',
+        category: 'react.js Next.js',
+        name: 'bhargavdev.com',
+        description: 'Built my portfolio with React.js, Next.js, and Tailwind CSS for dynamic, responsive design. Hosted on AWS Route53 for reliability and global accessibility, with AWS Amplify and git for streamlined CI/CD.',
+        link:'https://bhargavdev.com/',
+        github:'https://github.com/parekhbhargav25/MyPortfolio'
+    },
+
+    {
         image: '/work/registerMe.jpg',
         category: 'react.js',
         name: 'RegisterMe',

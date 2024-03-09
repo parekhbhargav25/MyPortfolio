@@ -5,6 +5,15 @@ import ProjectCard from '@/components/ProjectCard'
 
 const projectData = [
     {
+        image: '/work/portfolio.png',
+        category: 'react.js Next.js',
+        name: 'bhargavdev.com',
+        description: 'Built my portfolio with React.js, Next.js, and Tailwind CSS for dynamic, responsive design. Hosted on AWS Route53 for reliability and global accessibility, with AWS Amplify for streamlined CI/CD.',
+        link:'https://bhargavdev.com/',
+        github:'https://github.com/parekhbhargav25/MyPortfolio'
+    },
+
+    {
         image: '/work/registerMe.jpg',
         category: 'react.js',
         name: 'RegisterMe',
@@ -24,15 +33,15 @@ const projectData = [
         image: '/work/auction.png',
         category: 'C++ python',
         name: 'Auction System',
-        description: 'Developed front-end using Python and  back-end with C++. Created a bash script to automate testing procedures. Implemented key features: user registarion, admin access, bidding etc.',
+        description: 'Developed front-end using Python and  back-end with C++. Created a bash script to automate testing procedures. Implemented key features: user registarion, admin access, bidding, selling etc.',
         link:'https://github.com/IslamNuryyev/SQA_project',
         github:'https://github.com/IslamNuryyev/SQA_project'
     },
     {
         image: '/work/analysis.png',
-        category: 'react js',
+        category: 'python',
         name: ' Analysis on CO2 emission by Car',
-        description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles from 2000 to 2014.',
+        description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles',
         link:'/',
         github:'/'
     },
@@ -62,14 +71,14 @@ const Projects = () => {
                 <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'> My Projects</h2>
                 {/* Tabs*/}
                 <Tabs defaultValue={category} className='mb-24 xl:mb-48'>
-                    <TabsList className='w-max grid h-full md:grid-cols-6 lg:max-w-[650px] mb-12 mx-auto sm:border md:border dark:border'>
+                    <TabsList className='w-max grid lg:h-[80px] lg:grid-cols-7 sm:grid-cols-2 md:grid-cols-4 lg:max-w-[700px] mb-12 mx-auto sm:border md:border dark:border'>
                         {categories.map((category,index) =>{
                             return (
                                 <TabsTrigger 
                                 onClick ={()=> setCategory(category)}
                                 value={category} 
                                 key ={index} 
-                                className='capitalize w-[162px] md:w-auto'>{category}</TabsTrigger>
+                                className='capitalize w-[162px] mx:w-auto md:w-auto'>{category}</TabsTrigger>
                             )
                         }) }
                     </TabsList>

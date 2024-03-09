@@ -258,7 +258,7 @@ const About = () => {
                                                 const {name, skill}= item
                                                 return (
                                                     <div className="w-2/2 text-center xl:text-left mx-auto xl:mx-0 mb-6" key={index}>
-                                                        <span className="font-medium">{name} </span>
+                                                        <span style ={{color: "#e53935"}} className="font-medium">{name} </span>
                                                         <span>{skill} </span>
                                                     </div>
                                                 )
