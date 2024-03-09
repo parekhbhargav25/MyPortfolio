@@ -15,7 +15,7 @@ import Socials from './Socials'
 
 const handleButtonClick = () => {
     // Replace 'https://example.com' with the URL you want to open in a new tab
-  window.open('https://drive.google.com/file/d/1gv0AgTdaYGNJCZxJhi2Hatv6jFO3o87M/view?usp=drive_link', '_blank');
+  window.open('https://drive.google.com/file/d/1JhzwgAxkCrI-mmW4-vTCVLeLuPmRw7x8/view?usp=drive_link', '_blank');
     };
 
 

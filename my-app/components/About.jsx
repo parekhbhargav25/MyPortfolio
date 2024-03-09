@@ -37,16 +37,20 @@ const skillData = [
         title: 'skills',
         data:[
             {
-                name: 'Languages: Python, C, C++, Java, JavaScript, HTML, CSS, SQL, PL/SQL',
+                name: 'Languages:',
+                skill:  'Python, C, C++, Java, JavaScript, HTML, CSS, SQL, PL/SQL'
             },
             {
-                name: 'Databases: MySQL, PostgreSQL, NoSQL, MongoDB, AWS RDS, AWS DynamoDB'
+                name: 'Databases:',
+                skill: 'MySQL, PostgreSQL, NoSQL, MongoDB, AWS RDS, AWS DynamoDB'
             },
             {
-                name: 'Technologies: VS code, MySQL, React.js, Node.js, AWS, GraphQL, Git, Linux'
+                name: 'Technologies:',
+                skill: 'VS code, MySQL, React.js, Node.js, AWS, GraphQL, Git, Linux'
             },
             {
-                name: 'Concepts: Object Oriented Programming, Functional programming, Agile, Data Structures and Algorithms, CI/CD, SDLC, REST APIs'
+                name: 'Concepts:',
+                skill: 'Object Oriented Programming, Functional programming, Agile, Data Structures and Algorithms, CI/CD, SDLC, REST APIs'
             },
         ]
     },
@@ -251,10 +255,11 @@ const About = () => {
                                         <div className="border-b border-border mb-4"></div>
                                         <div>
                                             {getData(skillData, 'skills').data.map((item, index) =>{
-                                                const {name}= item
+                                                const {name, skill}= item
                                                 return (
                                                     <div className="w-2/2 text-center xl:text-left mx-auto xl:mx-0 mb-6" key={index}>
-                                                        <div className="font-medium">{name}</div>
+                                                        <span className="font-medium">{name} </span>
+                                                        <span>{skill} </span>
                                                     </div>
                                                 )
                                             } 
@@ -268,7 +273,7 @@ const About = () => {
                                         </h4>
                                         <div className="border-b border-border mb-4"> </div>
                                         {/*tools lidt */}
-                                            <div className="grid xl:grid-cols-6 sm:grid-cols-6 gap-y-6  gap-x-6 justify-center xl:justify-start">
+                                            <div className="grid xl:grid-cols-6 sm:grid-cols-8 gap-y-6  gap-x-6 justify-center xl:justify-start">
                                                 {getData(skillData, 'tools').data.map((item, index) =>{
                                                     const {imgPath} = item;
                                                     return (
