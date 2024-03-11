@@ -337,7 +337,7 @@ const About = () => {
                       </h4>
                       <div className="border-border mb-4 border-b"> </div>
                       {/*tools lidt */}
-                      <div className="grid justify-center gap-x-6 gap-y-6  sm:grid-cols-8 xl:grid-cols-6 xl:justify-start">
+                      <div className=" grid justify-center gap-x-6 gap-y-6  sm:grid-cols-8 xl:grid-cols-6 xl:justify-start">
                         {getData(skillData, "tools").data.map((item, index) => {
                           const { imgPath } = item;
                           return (
