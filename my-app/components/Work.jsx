@@ -1,14 +1,26 @@
 'use client'
-import React, {useState} from 'react'
-import {Tabs, TabsList, TabsContent, TabsTrigger} from '@/components/ui/tabs'
-import ProjectCard from '@/components/ProjectCard'
+import Link from 'next/link'
+import {Button} from "./ui/button"
+
+import {Swiper, SwiperSlide} from 'swiper/react'
+
+
+// import swipper style
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+// import required modules
+import {Pagination} from 'swiper/modules'
+
+//components
+import ProjectCard from './ProjectCard'
 
 const projectData = [
     {
         image: '/work/portfolio.png',
         category: 'react.js Next.js',
         name: 'bhargavdev.com',
-        description: 'Built my portfolio with React.js, Next.js, and Tailwind CSS for dynamic, responsive design. Hosted on AWS Route53 for reliability and global accessibility, with AWS Amplify for streamlined CI/CD.',
+        description: 'Built my portfolio with React.js, Next.js, and Tailwind CSS for dynamic, responsive design. Hosted on AWS Route53 for reliability and global accessibility, with AWS Amplify and git for streamlined CI/CD.',
         link:'https://bhargavdev.com/',
         github:'https://github.com/parekhbhargav25/MyPortfolio'
     },
@@ -23,7 +35,7 @@ const projectData = [
     },
     {
         image: '/work/auth.png',
-        category: 'react.js + python',
+        category: 'react.js + python flask',
         name: 'User Authentication',
         description: 'Developed a full-stack web application using Python Flask for the backend, React with Bootstrap for the frontend and allows users to register, log in, and access a product list retrieved from a MySQL DB.',
         link:'https://www.youtube.com/watch?v=DwyLnAkrmlE',
@@ -39,7 +51,7 @@ const projectData = [
     },
     {
         image: '/work/analysis.png',
-        category: 'python',
+        category: 'react js',
         name: ' Analysis on CO2 emission by Car',
         description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles',
         link:'/',
@@ -55,47 +67,38 @@ const projectData = [
     },
 ]
 
-const uniqueCategory = ['all projects', ...new Set (projectData.map((item) => item.category))]
-
-const Projects = () => {
-    const [categories, setCategories] = useState(uniqueCategory)
-    const [category, setCategory] = useState ('all projects')
-    const filteredProjects = projectData.filter(project => {
-        return category === 'all projects' ? project : project.category === category
-    })
-    // console.log(filteredProjects)
-
+const Work =() =>{
     return (
-        <section className='min-h-screen pt-12'>
+        <section className='relative mb-12 xl:mb-48'>
             <div className='container mx-auto'>
-                <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'> My Projects</h2>
-                {/* Tabs*/}
-                <Tabs defaultValue={category} className='mb-24 xl:mb-48'>
-                    <TabsList className='w-max grid lg:h-[80px] lg:grid-cols-7 sm:grid-cols-2 md:grid-cols-4 lg:max-w-[700px] mb-12 mx-auto sm:border md:border dark:border'>
-                        {categories.map((category,index) =>{
+                <div className='max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start'>
+                    <h2 className='section-title mb-4'> Latest Projects</h2>
+                    <p className='subtitle mb-8'> Here are the projects that represent my proudest achievements from my academic career. Each one has been a valuable learning experience, reinforcing my dedication and ability to deliver quality solutions.</p>
+                    <Link href='/projects'>
+                        <Button> All Projects</Button>
+                    </Link>
+                </div>
+                {/* Slider */}
+                <div className='xl:max-w-[1000px] xl:absolute right-0 top-0'>
+                    <Swiper className='h-[590px]' slidesPerView={1} breakpoints={{
+                        640: {
+                            slidesPerView: 2
+                        }
+                    }} spaceBetween={30} modules={[Pagination]} pagination={{clickable: true}}>
+                        {/*show only the first 4 projects */}
+                        {projectData.slice(0,5).map((project,index) => {
                             return (
-                                <TabsTrigger 
-                                onClick ={()=> setCategory(category)}
-                                value={category} 
-                                key ={index} 
-                                className='capitalize w-[162px] mx:w-auto md:w-auto'>{category}</TabsTrigger>
+                                <SwiperSlide kye={index}>
+                                    <ProjectCard project={project}/>
+                                </SwiperSlide>
                             )
-                        }) }
-                    </TabsList>
-                    {/** tabs content */}
-                    <div className='text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4'>
-                      {filteredProjects.map((project,index) => {
-                        return (
-                            <TabsContent value={category} key={index}>
-                                <ProjectCard project ={project}/>
-                            </TabsContent>
-                        )
-                      })}
-                    </div>
-                </Tabs>
-
+                        })}
+                    </Swiper>
+                </div>
             </div>
+
         </section>
     )
 }
-export default Projects
+
+export default Work
