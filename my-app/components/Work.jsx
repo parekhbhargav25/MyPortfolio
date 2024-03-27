@@ -51,7 +51,7 @@ const projectData = [
     },
     {
         image: '/work/analysis.png',
-        category: 'react js',
+        category: 'python',
         name: ' Analysis on CO2 emission by Car',
         description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles',
         link:'/',
