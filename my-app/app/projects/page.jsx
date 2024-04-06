@@ -5,6 +5,14 @@ import ProjectCard from '@/components/ProjectCard'
 
 const projectData = [
     {
+        image: '/work/Wordle.png',
+        category: 'react.js',
+        name: 'Wordle',
+        description: 'Created a Wordle clone utilizing React, empowering utilization of diverse React features and advanced data structures, demonstrating comprehensive mastery of frontend development.',
+        link:'https://main.d3rcz4bik3h08p.amplifyapp.com/',
+        github:'https://github.com/parekhbhargav25/WordleClone'
+    },
+    {
         image: '/work/portfolio.png',
         category: 'react.js Next.js',
         name: 'bhargavdev.com',
