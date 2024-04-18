@@ -72,11 +72,6 @@ const Contact = () => {
               <MailIcon size={18} className="text-primary" />
               <div>parekhbhargav25@gmail.com</div>
             </div>
-            {/** address */}
-            <div className=" flex items-center gap-x-8">
-              <HomeIcon size={18} className="text-primary" />
-              <div>26, Toddville Road, Brampton ON, L6P 3J2</div>
-            </div>
             {/** Mail */}
             <div className=" flex items-center gap-x-8">
               <PhoneCall size={18} className="text-primary" />
