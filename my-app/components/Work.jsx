@@ -17,6 +17,14 @@ import ProjectCard from './ProjectCard'
 
 const projectData = [
     {
+        image: '/work/Wordle.png',
+        category: 'react.js',
+        name: 'Wordle',
+        description: 'Created a Wordle clone utilizing React, empowering utilization of diverse React features and advanced data structures, demonstrating comprehensive mastery of frontend development.',
+        link:'https://main.d3rcz4bik3h08p.amplifyapp.com/',
+        github:'https://github.com/parekhbhargav25/WordleClone'
+    },
+    {
         image: '/work/portfolio.png',
         category: 'react.js Next.js',
         name: 'bhargavdev.com',
@@ -59,7 +67,7 @@ const projectData = [
     },
     {
         image: '/work/analysis.png',
-        category: 'react js',
+        category: 'python',
         name: ' Analysis on CO2 emission by Car',
         description: 'Finding trends and patterns in the emissions data over the specified timeframe. Used Jupyter Notebook to conduct an in-depth analysis of CO2 emissions produced by vehicles',
         link:'/',
@@ -94,7 +102,7 @@ const Work =() =>{
                         }
                     }} spaceBetween={30} modules={[Pagination]} pagination={{clickable: true}}>
                         {/*show only the first 4 projects */}
-                        {projectData.slice(0,5).map((project,index) => {
+                        {projectData.slice(0,6).map((project,index) => {
                             return (
                                 <SwiperSlide kye={index}>
                                     <ProjectCard project={project}/>

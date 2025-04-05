@@ -11,6 +11,14 @@ const projectData = [
         description: 'A home services app built to connect users with local service providers. The frontend uses React + Vite, tested with Selenium. Backend on MongoDB, tested with Jest. Deployed on Railway and uses GitHub Actions for CI/CD.',
         link:'https://fixifyawsamplify-production.up.railway.app/',
         github:'https://github.com/srithikraj/fixify'
+      },
+  {
+        image: '/work/Wordle.png',
+        category: 'react.js',
+        name: 'Wordle',
+        description: 'Created a Wordle clone utilizing React, empowering utilization of diverse React features and advanced data structures, demonstrating comprehensive mastery of frontend development.',
+        link:'https://main.d3rcz4bik3h08p.amplifyapp.com/',
+        github:'https://github.com/parekhbhargav25/WordleClone'
     },
     {
         image: '/work/portfolio.png',
