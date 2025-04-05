@@ -75,7 +75,7 @@ const Contact = () => {
             {/** Mail */}
             <div className=" flex items-center gap-x-8">
               <PhoneCall size={18} className="text-primary" />
-              <div>+1 (647) 974 1471</div>
+              <div>+1 (***) *** ****</div>
             </div>
           </div>
           <Form />

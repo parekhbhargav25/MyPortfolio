@@ -3,7 +3,6 @@ import {
     RiLinkedinFill,
     RiGithubFill,
     RiInstagramFill,
-    RiFacebookFill
 } from 'react-icons/ri'
 
 import Link from 'next/link'
@@ -21,10 +20,6 @@ const icons = [
         path: 'https://www.instagram.com/bhargav_25_/',
         name: <RiInstagramFill/>
     },
-    {
-        path: 'https://www.facebook.com/bhargav.parekh.92/',
-        name: <RiFacebookFill/>
-    }
 ]
 
 const Socials = ({containerStyles, iconStyles}) => {

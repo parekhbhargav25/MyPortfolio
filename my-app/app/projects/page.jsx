@@ -5,6 +5,14 @@ import ProjectCard from '@/components/ProjectCard'
 
 const projectData = [
     {
+        image: '/work/fixify.png',
+        category: 'react.js MongoDB',
+        name: 'Fixify',
+        description: 'A home services app built to connect users with local service providers. The frontend uses React + Vite, tested with Selenium. Backend on MongoDB, tested with Jest. Deployed on Railway and uses GitHub Actions for CI/CD.',
+        link:'https://fixifyawsamplify-production.up.railway.app/',
+        github:'https://github.com/srithikraj/fixify'
+      },
+  {
         image: '/work/Wordle.png',
         category: 'react.js',
         name: 'Wordle',
