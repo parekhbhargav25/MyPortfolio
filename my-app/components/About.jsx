@@ -19,7 +19,7 @@ const infoData = [
   },
   {
     icon: <PhoneCall size={20} />,
-    text: "+1 (647)-974-1471",
+    text: "+1 (***)-***-****",
   },
   {
     icon: <MailIcon size={20} />,
@@ -27,11 +27,11 @@ const infoData = [
   },
   {
     icon: <Calendar size={20} />,
-    text: "Graduated in Dec 2023",
+    text: "Graduating in Aug 2025",
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "Hons Bachelor's of Computer Science",
+    text: "MEng is Elect & Comp Eng (Software Eng)", 
   },
   {
     icon: <HomeIcon size={20} />,
@@ -115,6 +115,11 @@ const qualificationData = [
   {
     title: "education",
     data: [
+      {
+        university: "University of Waterloo",
+        degree: "MEng in Electrical and Computer Engineering",
+        years: "2024-2025",
+      },
       {
         university: "Ontario Tech University",
         degree: "Hons Bachelor's of Computer Sceince",
