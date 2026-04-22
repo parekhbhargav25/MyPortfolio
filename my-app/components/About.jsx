@@ -1,5 +1,6 @@
-import DevImg from "./DevImg";
+"use client";
 import Image from "next/image";
+import CountUp from "react-countup";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   User2,
@@ -9,8 +10,19 @@ import {
   GraduationCap,
   Calendar,
   Briefcase,
+  School,
+  Code2,
+  Cpu,
+  Award,
 } from "lucide-react";
 import { DiDatabase } from "react-icons/di";
+
+const statsData = [
+  { icon: <Code2 size={28} />, count: 5, suffix: "+", label: "Years Coding" },
+  { icon: <GraduationCap size={28} />, count: 2, suffix: "", label: "Degrees Earned" },
+  { icon: <Cpu size={28} />, count: 15, suffix: "+", label: "Technologies" },
+  { icon: <Award size={28} />, count: 4, suffix: "+", label: "Certifications" },
+];
 
 const infoData = [
   {
@@ -27,11 +39,15 @@ const infoData = [
   },
   {
     icon: <Calendar size={20} />,
-    text: "Graduating in Aug 2025",
+    text: "Graduated in Dec 2025",
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "MEng is Elect & Comp Eng (Software Eng)", 
+    text: "MEng is Elect & Comp Eng (Software Eng)",
+  },
+  {
+    icon: <School size={20} />,
+    text: "University of Waterloo",
   },
   {
     icon: <HomeIcon size={20} />,
@@ -161,12 +177,34 @@ const About = () => {
           About me
         </h2>
         <div className="flex flex-col xl:flex-row">
-          {/* image */}
-          <div className="relative hidden xl:flex">
-            <DevImg
-              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-              imgSrc="/about/Bhargav1.png"
-            />
+          {/* stats grid */}
+          <div className="relative hidden xl:flex items-center justify-center w-[505px] h-[505px]">
+            <div className="grid grid-cols-2 gap-5 w-full h-full p-4">
+              {statsData.map((stat, index) => (
+                <div
+                  key={index}
+                  className="group relative flex flex-col justify-between p-8 rounded-[30px] border bg-background hover:border-primary hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-primary group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div>
+                    <div className="text-5xl font-bold text-primary leading-none mb-2">
+                      <CountUp
+                        end={stat.count}
+                        duration={3}
+                        enableScrollSpy
+                        scrollSpyOnce
+                      />
+                      {stat.suffix}
+                    </div>
+                    <div className="text-muted-foreground text-base">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <div
             // style={{ paddingLeft: "10%" }}
