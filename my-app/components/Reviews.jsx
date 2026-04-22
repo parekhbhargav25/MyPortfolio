@@ -72,7 +72,7 @@ const Reviews = () => {
             return (
               <SwiperSlide key={index}>
                 <Card className="bg-tertiary dark:bg-secondary/40 min-h-[400px] p-8">
-                  <CardHeader classNamep="p-0 mb-10">
+                  <CardHeader className="p-0 mb-10">
                     <div className="flex items-center gap-x-4">
                       {/** image */}
                       <Image

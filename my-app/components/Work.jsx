@@ -104,7 +104,7 @@ const Work =() =>{
                         {/*show only the first 4 projects */}
                         {projectData.slice(0,6).map((project,index) => {
                             return (
-                                <SwiperSlide kye={index}>
+                                <SwiperSlide key={index}>
                                     <ProjectCard project={project}/>
                                 </SwiperSlide>
                             )
