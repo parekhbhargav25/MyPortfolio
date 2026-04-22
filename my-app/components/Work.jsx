@@ -17,6 +17,14 @@ import ProjectCard from './ProjectCard'
 
 const projectData = [
     {
+        image: '/work/lekhya.jpg',
+        category: 'react.js Next.js',
+        name: 'Lekhya',
+        description: 'AI-powered expense tracker built with Next.js and TypeScript. Features OpenAI receipt parsing, a Bento-style analytics dashboard, NextAuth authentication, and a LangChain assistant for natural-language queries over financial data.',
+        link: 'https://lekhya-seven.vercel.app',
+        github: 'https://github.com/parekhbhargav25/Lekhya'
+    },
+    {
         image: '/work/Wordle.png',
         category: 'react.js',
         name: 'Wordle',
